@@ -7,8 +7,48 @@
   <title>Tailwind CA - Gøril Solheim</title>
 </head>
 <body>
-  <header>
+  <body class="bg-gray-100">
 
+    <header class="bg-gray-900 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="text-xl font-bold">Social Media</a>
+
+          <!-- Search Bar -->
+          <div class="hidden md:flex items-center bg-gray-800 p-2 rounded-lg">
+              <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-white px-2 placeholder-gray-400">
+              <button class="text-white ml-2">
+                  🔍
+              </button>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-6">
+              <a href="#" class="hover:text-gray-400">Home</a>
+              <a href="#" class="hover:text-gray-400">Explore</a>
+              <a href="#" class="hover:text-gray-400">Profile</a>
+              <a href="#" class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600">Login</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-button" class="md:hidden text-white focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+          </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 p-4 mt-2 rounded-lg">
+          <div class="flex items-center bg-gray-700 p-2 rounded-lg mb-2">
+              <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-white px-2 placeholder-gray-400 w-full">
+              <button class="text-white">🔍</button>
+          </div>
+          <a href="#" class="block py-2 px-4 text-white hover:bg-gray-700 rounded">Home</a>
+          <a href="#" class="block py-2 px-4 text-white hover:bg-gray-700 rounded">Explore</a>
+          <a href="#" class="block py-2 px-4 text-white hover:bg-gray-700 rounded">Profile</a>
+          <a href="#" class="block bg-blue-500 text-center py-2 px-4 text-white rounded-lg hover:bg-blue-600 mt-2">Login</a>
+      </nav>
   </header>
 
   <main>
@@ -50,11 +90,11 @@
       <!-- Post Content -->
       <div class="flex-1">
         <!-- Post Title -->
-        <h2 class="text-lg font-bold text-gray-900">Poppyseeds in the wind</h2>
+        <h2 class="text-lg font-bold text-gray-900">Post 1</h2>
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          This is a short description of the post content. It is limited to two lines.
+          "Do what you can, with what you have, where you are." Theodore Roosevelt
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -102,7 +142,7 @@
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          A kitten in the grass.
+          "Fear me, for I am the king of this jungle… all 500 grams of me." 🐱👑
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -148,7 +188,7 @@
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          Corgy.
+          "When you walk into the room and forget why… but you’re just happy to be included." 😆🐶
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -195,7 +235,7 @@
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          Something about grasping time
+          Tried to grab some sunshine… now my hand is extra well-done. 🔥😂
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -241,7 +281,7 @@
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          This is a short description of the post content. It is limited to two lines.
+          "Growing old together is the greatest adventure of all."
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -288,7 +328,7 @@
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          This is a short description of the post content. It is limited to two lines.
+          "Santa’s backup team sorting out who gets to lead the sleigh this year." 🎅✨
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -334,7 +374,7 @@
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          This is a short description of the post content. It is limited to two lines.
+          "When you’re the best-dressed in the room but still skeptical of everyone’s life choices." 😎🐶
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -377,11 +417,11 @@
       <!-- Post Content -->
       <div class="flex-1">
         <!-- Post Title -->
-        <h2 class="text-lg font-bold text-gray-900">Post Title</h2>
+        <h2 class="text-lg font-bold text-gray-900">Post 8</h2>
         
         <!-- Post Description -->
         <p class="text-sm text-gray-600 line-clamp-2">
-          This is a short description of the post content. It is limited to two lines.
+          "Something deep and meaningful..."
         </p>
         
         <!-- Post Meta (Timestamp & Actions) -->
@@ -653,5 +693,19 @@
   <footer>
 
   </footer>
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.setAttribute("d", "M4 6h16M4 12h16m-7 6h7"); // Menu icon
+        } else {
+            menuIcon.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Close (X) icon
+        }
+    });
+</script>
 </body>
 </html>
