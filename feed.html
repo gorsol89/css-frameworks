@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed - MySocial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 fixed top-0 left-0 w-full shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/SOME_logo.png" alt="Logo" class="h-10 w-auto">
+                <span class="text-xl font-bold"></span>
+            </a>
+    
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center bg-gray-800 p-2 rounded-lg">
+                <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-white px-2 placeholder-gray-400">
+                <button class="text-white ml-2">🔍</button>
+            </div>
+    
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link hover:text-gray-400" data-page="index">Login</a>
+                <a href="feed.html" class="nav-link hover:text-gray-400" data-page="feed">Feed</a>
+                <a href="profile.html" class="nav-link hover:text-gray-400" data-page="profile">Profile</a>
+            </nav>
+    
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    
+        <!-- Mobile Dropdown Menu -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-gray-800 p-4 mt-2 rounded-lg">
+            <div class="flex items-center bg-gray-700 p-2 rounded-lg mb-2">
+                <input type="text" placeholder="Search..." class="bg-transparent border-none outline-none text-white px-2 placeholder-gray-400 w-full">
+                <button class="text-white">🔍</button>
+            </div>
+            <a href="index.html" class="block py-2 px-4 text-white hover:bg-gray-700 rounded nav-link" data-page="index">Login</a>
+            <a href="feed.html" class="block py-2 px-4 text-white hover:bg-gray-700 rounded nav-link" data-page="feed">Feed</a>
+            <a href="profile.html" class="block py-2 px-4 text-white hover:bg-gray-700 rounded nav-link" data-page="profile">Profile</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-24 p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Feed</h2>
+
+        <!-- Feed Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+             <!-- Repeatable Post Card -->
+    <div class="bg-white shadow rounded-lg p-4 border border-gray-200">
+      <!-- User Info -->
+      <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center space-x-3">
+              <img src="images/nicolas-ladino-silva-o2DVsV2PnHE-unsplash.jpg" alt="User profile image" class="w-10 h-10 rounded-full object-cover">
+              <div>
+                  <h3 class="text-sm font-semibold text-gray-900">Vanilla Photography</h3>
+                  <p class="text-xs text-gray-500">2 hours ago</p>
+              </div>
+          </div>
+          
+          <!-- Follow Button -->
+          <a href="profile.html" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-xs hover:bg-blue-600 transition">
+              Follow
+          </a>
+      </div>
+
+      <!-- Post Image -->
+      <img src="images/jordan-wozniak-xP_AGmeEa6s-unsplash.jpg" alt="Image of a sunset" class="w-full h-40 object-cover rounded-lg">
+
+      <!-- Post Content -->
+      <h2 class="text-lg font-bold text-gray-900 mt-2"></h2>
+      <p class="text-sm text-gray-600">Captured this stunning sunset while hiking. 🌅</p>
+
+      <!-- Like & Comment -->
+      <div class="mt-2 flex items-center justify-between w-full text-xs text-gray-500">
+          <div class="flex items-center space-x-3 text-blue-500">
+              <button class="flex items-center space-x-1 hover:text-blue-700">❤️ <span>15</span></button>
+              <button class="flex items-center space-x-1 hover:text-blue-700">💬 <span>3</span></button>
+          </div>
+      </div>
+  </div>
+  <!-- End of Repeatable Post Card -->
+
+      <!-- Repeatable Post Card -->
+      <div class="bg-white shadow rounded-lg p-4 border border-gray-200">
+        <!-- User Info -->
+        <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center space-x-3">
+                <img src="images/raoul-droog-yMSecCHsIBc-unsplash.jpg" alt="Grey cat with yellow sunglasses" class="w-10 h-10 rounded-full object-cover">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900">Gøril Solheim</h3>
+                    <p class="text-xs text-gray-500">2 hours ago</p>
+                </div>
+            </div>
+            
+            <!-- Follow Button -->
+            <a href="profile.html" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-xs hover:bg-blue-600 transition">
+                Following
+            </a>
+        </div>
+  
+        <!-- Post Image -->
+        <img src="images/karsten-winegeart-oU6KZTXhuvk-unsplash.jpg" alt="French bulldog dressed in yellow shirt looking over its shoulder" class="w-full h-40 object-cover rounded-lg">
+  
+        <!-- Post Content -->
+        <h2 class="text-lg font-bold text-gray-900 mt-2">🤣</h2>
+        <p class="text-sm text-gray-600">When you’re the best-dressed in the room but still skeptical of everyone’s life choices. 😎🐶</p>
+  
+        <!-- Like & Comment -->
+        <div class="mt-2 flex items-center justify-between w-full text-xs text-gray-500">
+            <div class="flex items-center space-x-3 text-blue-500">
+                <button class="flex items-center space-x-1 hover:text-blue-700">❤️ <span>15</span></button>
+                <button class="flex items-center space-x-1 hover:text-blue-700">💬 <span>3</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- End of Repeatable Post Card -->
+
+        <!-- Repeatable Post Card -->
+        <div class="bg-white shadow rounded-lg p-4 border border-gray-200">
+          <!-- User Info -->
+          <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center space-x-3">
+                  <img src="images/louis-hansel-v3OlBE6-fhU-unsplash.jpg" alt="chef fixing a plate in under heating lamps" class="w-10 h-10 rounded-full object-cover">
+                  <div>
+                      <h3 class="text-sm font-semibold text-gray-900">LouisTheChef</h3>
+                      <p class="text-xs text-gray-500">2 hours ago</p>
+                  </div>
+              </div>
+              
+              <!-- Follow Button -->
+              <a href="profile.html" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-xs hover:bg-blue-600 transition">
+                  Follow
+              </a>
+          </div>
+    
+          <!-- Post Image -->
+          <img src="images/andraz-lazic-iy_MT2ifklc-unsplash.jpg" alt="Salmon nigiri, makiroll and a bowl of soyasouce in a bowl" class="w-full h-40 object-cover rounded-lg">
+    
+          <!-- Post Content -->
+          <h2 class="text-lg font-bold text-gray-900 mt-2">YingYing in Bergen</h2>
+          <p class="text-sm text-gray-600">YingYing in Bergen got the best sushi I know! </p>
+    
+          <!-- Like & Comment -->
+          <div class="mt-2 flex items-center justify-between w-full text-xs text-gray-500">
+              <div class="flex items-center space-x-3 text-blue-500">
+                  <button class="flex items-center space-x-1 hover:text-blue-700">❤️ <span>15</span></button>
+                  <button class="flex items-center space-x-1 hover:text-blue-700">💬 <span>3</span></button>
+              </div>
+          </div>
+      </div>
+      <!-- End of Repeatable Post Card -->
+
+          <!-- Repeatable Post Card -->
+    <div class="bg-white shadow rounded-lg p-4 border border-gray-200">
+      <!-- User Info -->
+      <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center space-x-3">
+            <img src="images/louis-hansel-v3OlBE6-fhU-unsplash.jpg" alt="chef fixing a plate in under heating lamps" class="w-10 h-10 rounded-full object-cover">
+              <div>
+                  <h3 class="text-sm font-semibold text-gray-900">LouisTheChef</h3>
+                  <p class="text-xs text-gray-500">2 hours ago</p>
+              </div>
+          </div>
+          
+          <!-- Follow Button -->
+          <a href="profile.html" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-xs hover:bg-blue-600 transition">
+              Follow
+          </a>
+      </div>
+
+      <!-- Post Image -->
+      <img src="images/jonathan-borba-uB7q7aipU2o-unsplash.jpg" alt="hands chopping a green jalapeneo" class="w-full h-40 object-cover rounded-lg">
+
+      <!-- Post Content -->
+      <h2 class="text-lg font-bold text-gray-900 mt-2">Mastering the Art of Chopping</h2>
+      <p class="text-sm text-gray-600">Precision, passion, and fresh ingredients – the secret to every great dish! 🍽️🔪 #ChefLife #FreshFlavors #KnifeSkills</p>
+
+      <!-- Like & Comment -->
+      <div class="mt-2 flex items-center justify-between w-full text-xs text-gray-500">
+          <div class="flex items-center space-x-3 text-blue-500">
+              <button class="flex items-center space-x-1 hover:text-blue-700">❤️ <span>15</span></button>
+              <button class="flex items-center space-x-1 hover:text-blue-700">💬 <span>3</span></button>
+          </div>
+      </div>
+  </div>
+  <!-- End of Repeatable Post Card -->    <!-- Repeatable Post Card -->
+    <div class="bg-white shadow rounded-lg p-4 border border-gray-200">
+      <!-- User Info -->
+      <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center space-x-3">
+              <img src="images/raoul-droog-yMSecCHsIBc-unsplash.jpg" alt="User profile image" class="w-10 h-10 rounded-full object-cover">
+              <div>
+                  <h3 class="text-sm font-semibold text-gray-900">Gøril Solheim</h3>
+                  <p class="text-xs text-gray-500">2 hours ago</p>
+              </div>
+          </div>
+          
+          <!-- Follow Button -->
+          <a href="profile.html" class="bg-blue-500 text-white px-3 py-1 rounded-lg text-xs hover:bg-blue-600 transition">
+              Follow
+          </a>
+      </div>
+
+      <!-- Post Image -->
+      <img src="images/cole-keister-qNJpGSCv_Jc-unsplash.jpg" alt="Corgy sitting on its butt" class="w-full h-40 object-cover rounded-lg">
+
+      <!-- Post Content -->
+      <h2 class="text-lg font-bold text-gray-900 mt-2">Todays fun</h2>
+      <p class="text-sm text-gray-600">That face you make when someone says ‘Who’s a good boy?’ and you already know the answer. 🐶</p>
+
+      <!-- Like & Comment -->
+      <div class="mt-2 flex items-center justify-between w-full text-xs text-gray-500">
+          <div class="flex items-center space-x-3 text-blue-500">
+              <button class="flex items-center space-x-1 hover:text-blue-700">❤️ <span>15</span></button>
+              <button class="flex items-center space-x-1 hover:text-blue-700">💬 <span>3</span></button>
+          </div>
+      </div>
+  </div>
+  <!-- End of Repeatable Post Card -->    <!-- Repeatable Post Card -->
+    
+    <script>
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Highlight Active Page
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll(".nav-link");
+            const currentPage = window.location.pathname.split("/").pop().replace(".html", "");
+
+            links.forEach(link => {
+                if (link.dataset.page === currentPage) {
+                    link.classList.add("text-blue-500", "font-bold");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
