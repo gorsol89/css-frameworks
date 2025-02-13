@@ -1,22 +1,15 @@
 {
-  "name": "tailwind-project",
+  "name": "css-frameworks",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build && npx tailwindcss -i ./style.css -o ./dist/style.css",
-  "preview": "vite preview"
-}
-,
+    "dev": "vite",
+    "build": "vite build && npx tailwindcss -i ./src/styles.css -o ./dist/styles.css --minify",
+    "preview": "vite preview"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.2",
-    "tailwindcss": "^3.4.17",
-    "vite": "^6.1.0"
-  },
   "dependencies": {
     "ansi-regex": "^6.1.0",
     "ansi-styles": "^6.2.1",
@@ -106,6 +99,12 @@
     "wrap-ansi": "^8.1.0",
     "wrap-ansi-cjs": "^7.0.0",
     "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.1.0"
   },
   "repository": {
     "type": "git",

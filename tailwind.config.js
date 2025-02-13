@@ -1,8 +1,8 @@
+// tailwind.config.js
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{html,js}'],
+  content: ["./index.html", "./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
-};
+  plugins: []
+}
