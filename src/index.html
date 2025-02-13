@@ -89,10 +89,12 @@
     </main>
     
     <script>
+        // Toggle Mobile Menu
         document.getElementById('menu-button').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-        
+    
+        // Highlight Active Navigation Link
         document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(".nav-link").forEach(link => {
                 if (link.dataset.page === window.location.pathname.split("/").pop().replace(".html", "")) {
@@ -100,26 +102,47 @@
                 }
             });
         });
-        
+    
+        // Handle Authentication Form Submission
         document.getElementById("auth-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            if (document.getElementById("password").value.length < 8) {
-                document.getElementById("error-message").classList.remove("hidden");
+            event.preventDefault(); // Prevent default form submission
+            
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+    
+            if (password.length < 8) {
+                errorMessage.classList.remove("hidden"); // Show error message
             } else {
-                document.getElementById("error-message").classList.add("hidden");
-                setTimeout(() => window.location.href = "profile.html", 500);
+                errorMessage.classList.add("hidden"); // Hide error message
+                
+                // Simulating form processing delay before redirecting
+                setTimeout(() => {
+                    window.location.href = "/profile.html"; // Ensure correct redirect path
+                }, 500);
             }
         });
-        
+    
+        // Toggle Login/Register Form
         document.getElementById("toggle-button").addEventListener("click", () => {
-            const isRegister = document.getElementById("form-title").textContent === "Register";
-            document.getElementById("form-title").textContent = isRegister ? "Login" : "Register";
-            document.getElementById("toggle-text").textContent = isRegister ? "Don't have an account?" : "Already have an account?";
-            document.getElementById("toggle-button").textContent = isRegister ? "Register" : "Login";
-            document.getElementById("submit-button").textContent = isRegister ? "Login" : "Register";
-            document.getElementById("email-field").classList.toggle("hidden");
-            document.getElementById("confirm-password-field").classList.toggle("hidden");
+            const formTitle = document.getElementById("form-title");
+            const toggleText = document.getElementById("toggle-text");
+            const toggleButton = document.getElementById("toggle-button");
+            const submitButton = document.getElementById("submit-button");
+            const emailField = document.getElementById("email-field");
+            const confirmPasswordField = document.getElementById("confirm-password-field");
+    
+            const isRegister = formTitle.textContent === "Register";
+    
+            formTitle.textContent = isRegister ? "Login" : "Register";
+            toggleText.textContent = isRegister ? "Don't have an account?" : "Already have an account?";
+            toggleButton.textContent = isRegister ? "Register" : "Login";
+            submitButton.textContent = isRegister ? "Login" : "Register";
+    
+            // Toggle fields visibility
+            emailField.classList.toggle("hidden");
+            confirmPasswordField.classList.toggle("hidden");
         });
     </script>
+    
 </body>
 </html>

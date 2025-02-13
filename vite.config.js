@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: 'src', // Tells Vite to look inside src/
+  root: 'src', // Ensures Vite uses src/ as the root directory
   build: {
-    outDir: '../dist', // Places built files into dist/
+    outDir: '../dist', // Places built files inside dist/
     rollupOptions: {
       input: {
-        main: 'src/index.html', 
+        main: 'src/index.html',
         profile: 'src/profile.html',
         feed: 'src/feed.html'
       }
