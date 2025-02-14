@@ -48,34 +48,53 @@
         <a href="profile.html" class="block py-2 px-4 text-white hover:bg-gray-700 rounded nav-link" data-page="profile">Profile</a>
     </nav>
 </header>
-  <main class="max-w-4xl mx-auto p-6">
-    <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+<main class="max-w-4xl mx-auto p-6">
+  <div class="bg-white shadow-lg rounded-lg p-6 text-center">
       <!-- Profile Image -->
       <img src="images/raoul-droog-yMSecCHsIBc-unsplash.jpg" 
            alt="Grey cat with yellow sunglasses" 
            class="w-32 h-32 mx-auto rounded-full border-4 border-gray-300 object-cover">
-  
+
       <!-- Username -->
       <h2 class="mt-4 text-xl font-semibold text-gray-900">Gøril Solheim</h2>
+
       <!-- Followers Count -->
       <p id="followersCount" class="text-gray-600 mt-1">24 Followers</p>
+
       <!-- Follow Button -->
       <button id="followBtn" class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
           Follow
       </button>
-  
+
       <!-- Bio Section -->
       <p class="mt-4 text-gray-700 text-sm">
           📍 Newbie Web Developer & Animal Enthusiast. Love coffee, bad jokes, and reading! ☕🦥👩🏼‍🏫
-          <br>
-          <br>
-          The soundtrack of my life at the moment: 
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3PFzdbtx1Us?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          <a href="index.html" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
-            Logout
-        </a>
-        </p>
-    </div>
+      </p>
+
+      <!-- Spotify Playlist -->
+      <div class="mt-4">
+          <p class="text-gray-700 text-sm font-semibold">The soundtrack of my life at the moment:</p>
+          <iframe 
+              style="border-radius:12px" 
+              src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3PFzdbtx1Us?utm_source=generator" 
+              width="100%" height="152" 
+              frameBorder="0" 
+              allowfullscreen="" 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy">
+          </iframe>
+      </div>
+
+      <!-- Logout Button -->
+      <div class="mt-6">
+          <a href="index.html" 
+             class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition inline-block">
+              Logout
+          </a>
+      </div>
+  </div>
+</main>
+
   
     <!-- User Posts Section -->
     <div class="mt-6">
