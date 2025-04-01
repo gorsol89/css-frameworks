@@ -1,11 +1,11 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    "./index.html",       // Ensures Tailwind scans your main HTML file
-    "./src/**/*.{html,js}" // Scans all HTML and JS files in src
+    "./*.html",               // include all HTML in the root
+    "./src/**/*.{html,js}"    // include any HTML/JS in src
   ],
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
-}
+  plugins: [],
+};
