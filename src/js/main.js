@@ -1,2 +1,2 @@
-import "./style.css";
-window.location.href = "/profile.html";
+// Import Tailwind CSS
+import "../css/style.css";
