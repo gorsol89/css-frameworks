@@ -6,34 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FuzzyGallery</title>
   <meta name="description" content="Share and browse fun animal pics!" />
-  <!-- Favicon & Social preview images would go here -->
-  
-  <!-- Tailwind-generated CSS -->
-  <link href="dist/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-cream-cloud min-h-screen">
-  <!-- App shell: header is injected by JS component -->
+  <!-- App shell mount point -->
   <div id="app"></div>
-  
-  <!-- Your main JS bundle (ES6 modules) -->
-  <script type="module" src="src/js/main.js"></script>
 
-  <!-- A pink button with a yellow hover -->
-<button class="px-4 py-2 bg-pastel-pink hover:bg-pastel-yellow text-soft-mocha font-semibold rounded-lg">
-  Upload Pet Pic
-</button>
-
-<!-- A header with mint background and mocha text -->
-<header class="bg-mint-whisper text-soft-mocha p-6 rounded-b-2xl shadow-md">
-  <h2 class="text-3xl">Welcome back!</h2>
-</header>
-
-<!-- A card on cream background -->
-<article class="bg-cream-cloud border-2 border-soft-mocha p-4 rounded-xl">
-  <h3 class="text-xl text-pastel-pink mb-2">Cute Kitten</h3>
-  <p class="text-gray-700">Look at this little ball of fluff…</p>
-</article>
-
-
+  <!-- Vite will serve this as an ES module -->
+  <script type="module" src="/src/js/main.js"></script>
 </body>
 </html>
