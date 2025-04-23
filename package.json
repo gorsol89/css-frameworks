@@ -3,26 +3,30 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-  "build:css": "tailwindcss -i ./src/css/styles.css -o ./dist/styles.css --minify",
-  "watch:css": "tailwindcss -i ./src/css/styles.css -o ./dist/styles.css --watch"
-}
-,
+    "dev": "concurrently \"npm run watch:css\" \"vite\"",
+    "build": "npm run build:css && vite build",
+    "preview": "vite preview",
+    "build:css": "tailwindcss -i ./src/css/styles.css -o ./dist/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/styles.css -o ./dist/styles.css --watch"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gorsol89/css-frameworks.git"
+    "url": "https://github.com/gorsol89/css-frameworks.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/gorsol89/css-frameworks/issues"
   },
   "homepage": "https://github.com/gorsol89/css-frameworks#readme",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.4"
+    "concurrently": "^8.0.0",
+    "tailwindcss": "^4.1.4",
+    "vite": "^6.3.2"
   }
 }
